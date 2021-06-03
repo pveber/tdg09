@@ -106,7 +106,7 @@ public class Analyse {
         System.out.println("# " + Strings.repeat("-", 80) + "\n");
 
         // We're now ready to run
-        ExecutorService pool = Executors.newFixedThreadPool(options.threads);
+        ExecutorService pool = Executors.newFixedThreadPool(1);
         CompletionService<Result> ecs = new ExecutorCompletionService<Result>(pool);
 
        for (int i = 1; i <= alignment.getSiteCount(); i++) {
