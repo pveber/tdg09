@@ -11,7 +11,7 @@ package tdg09.models;
 public interface Constants {
     static char[] aaNames = "ARNDCQEGHILKMFPSTWYV".toCharArray();
     static double DEFAULT_TOL = 5.0e-6; // tolerance used in determining the convergence of the minimization
-    static boolean DELETE_SINGLES = true; // whether to remove residues that occur only once
+    static boolean DELETE_SINGLES = false; // whether to remove residues that occur only once
     static double DEFAULT_ETA = 1.0; // default rate
     static double ETA_STEPSIZE = 0.5;
     static double FREQ_STEPSIZE = 1.0;
