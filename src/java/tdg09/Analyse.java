@@ -225,8 +225,9 @@ public class Analyse {
             if (r.models != null) {
                 polySites.add(r);
 
+		assert(r.models.get(1).lnL >= r.models.get(0).lnL);
                 r.lrt = LikelihoodRatioTest.getSignificance(
-			Math.max(0., r.models.get(1).lnL - r.models.get(0).lnL), // delta lnL
+			r.models.get(1).lnL - r.models.get(0).lnL, // delta lnL, normally guaranteed to be >= 0
                         r.models.get(1).parameters - r.models.get(0).parameters); // degrees of freedom
             } else {
                 r.lrt = 1.0;
